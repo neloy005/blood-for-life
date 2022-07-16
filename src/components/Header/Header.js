@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../../img/icon.png'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -17,10 +18,10 @@ const Header = () => {
             height="30"
             className="d-inline-block align-top"
           />{' '}
-          <Navbar.Brand href="#home">Blood for life</Navbar.Brand>
+          <Navbar.Brand as={Link} to='/'>Blood for life</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Read article</Nav.Link>
+            <Nav.Link as={Link} to='/'>Home</Nav.Link>
+            <Nav.Link as={Link} to='/article'>Read article</Nav.Link>
             <Nav.Link href="#pricing">Pricing</Nav.Link>
           </Nav>
         </Container>
